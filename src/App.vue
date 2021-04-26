@@ -14,7 +14,9 @@
    >
    <v-icon class="blue--text">mdi-map-marker</v-icon>
    <v-icon>mdi-menu-down</v-icon>
-      <v-toolbar-title>Manila, Philippines</v-toolbar-title>     <v-btn text class="">
+      <v-toolbar-title>Manila, Philippines</v-toolbar-title>   
+       <v-spacer> </v-spacer> 
+        <v-btn text class="">
        <span>Sign in</span>
       </v-btn>
 
