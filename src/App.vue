@@ -13,11 +13,11 @@
 
    >
    <v-icon class="blue--text">mdi-map-marker</v-icon>
-   <v-icon>mdi-menu-down</v-icon>
-      <v-toolbar-title>Manila, Philippines</v-toolbar-title>   
+   <v-icon >mdi-menu-down</v-icon>
+      <v-toolbar-title>Manila, Philippines</v-toolbar-title> 
        <v-spacer> </v-spacer> 
         <v-btn text class="">
-       <span>Sign in</span>
+       <span class="blue--text">Sign in</span>
       </v-btn>
 
       <v-btn text>
@@ -50,3 +50,10 @@ export default {
   }),
 };
 </script>
+
+
+<style scoped>
+a{
+  text-decoration:none;
+}
+</style>
