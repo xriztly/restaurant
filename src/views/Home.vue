@@ -35,7 +35,7 @@
 <br> <br>
 
 <!--Dinner Suggestion Section--->
-  <v-layout row wrap>
+  <v-flex>
     <div >
      <div class="d-inline" style="font-weight:bold"> Dinner Suggestions</div>
      <div class="d-inline float-right"> <a id="a" href="#">View all</a> </div>
@@ -45,7 +45,7 @@
     <v-container>
       <v-row>
         <v-col
-          v-for="n in 6"
+          v-for="n in itemdinner"
           :key="n"
           xl="6"
           
@@ -64,14 +64,14 @@
 
    </div>
    
-    <v-card-title>Cafe Badilico</v-card-title>
+    <v-card-title>{{n.name}}</v-card-title>
 
     <div>
       <div class="d-inline-block">
            <v-icon class="blue--text">mdi-map-marker</v-icon>
       </div>
       <div class="d-inline-block ">
-       <p>$ • Italian, Cafes</p>
+       <p>$ • {{n.restoName}}</p>
       </div>
     </div>
     <v-card-text>
@@ -87,11 +87,11 @@
           size="20"
         ></v-rating>
         <div class="grey--text">
-          4.5
+         {{ n.ratings}}
         </div>
         
         <div class="grey--text ml-12">
-          Asia
+          {{n.loc}}
         </div>
       </v-row>
 
@@ -106,7 +106,7 @@
         </v-container>
       </v-item-group>
 
-   </v-layout>
+   </v-flex>
 
  <br>
  <br>
@@ -341,28 +341,23 @@
   </template>
 
 <script>
-// @ is an alias to /src
-
 export default {
-  
-  name: 'Home',
-  components: {
-   
-  }, data(){
-    
-    return {
-        items: [
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-          },
-         
-           
-        ],
-      }
+  data (){
+
+    return{
+      itemdinner:[
+        { name: 'Cafe Badilico', src: '../assets/logo.png', restoName: 'Italian, Cafe', ratings: '4.5', loc: 'Asia'},
+           { name: 'Cafe Badilico', src: '../assets/logo.png', restoName: 'Italian, Cafe', ratings: '4.5', loc: 'Asia'},
+            { name: 'Cafe Badilico', src: '../assets/logo.png', restoName: 'Italian, Cafe', ratings: '4.5', loc: 'Asia'},
+             { name: 'Cafe Badilico', src: '../assets/logo.png', restoName: 'Italian, Cafe', ratings: '4.5', loc: 'Asia'},
+              { name: 'Cafe Badilico', src: '../assets/logo.png', restoName: 'Italian, Cafe', ratings: '4.5', loc: 'Asia'},
+               { name: 'Cafe Badilico', src: '../assets/logo.png', restoName: 'Italian, Cafe', ratings: '4.5', loc: 'Asia'},
+      ]
+    }
   }
+  
 }
 </script>
-
 
 <style scoped>
 
